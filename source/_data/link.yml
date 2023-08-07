@@ -5,10 +5,22 @@
       link: https://jerryc.me/
       avatar: https://jerryc.me/image/avatar.png
       descr: 今日事,今日毕
+
     - name: Hexo
       link: https://hexo.io/zh-tw/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       descr: 快速、简单且强大的网誌框架
+
+    - name: 无镜
+      link: https://www.drflower.top/
+      avatar: https://blog-1300673521.cos.ap-guangzhou.myqcloud.com/images/avatar.jpg
+      descr: 梦想成为家里蹲的游戏开发萌新
+
+    - name: 烟雨迷离半世殇
+      link: https://www.lfzxb.top/
+      avatar: https://myfirstblog.oss-cn-hangzhou.aliyuncs.com/AvatarAndBGs/33ec68b7fe1bb742.jpg!webp
+      descr: 愿天下心诚剑士人人可剑开天门！
+
 - class_name: 网站
   class_desc: 值得推荐的网站
   link_list:
