@@ -319,10 +319,14 @@ livere:
 # https://github.com/gitalk/gitalk
 gitalk:
   client_id: ccc3a8f7dffa8fffff16
-  client_secret: fee9e7f712753fff85bfbd1b75864bde054000b9
-  repo: The-Black-Sun.github.io
+  client_secret: 6d421ff290891992e3f652f6312b26b0d48fcd4d
+  repo: BlogComment
   owner: The-Black-Sun
   admin: The-Black-Sun
+  language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
+  distractionFreeMode: false # Facebook-like distraction free mode.
+  pagerDirection: last # Comment sorting direction, available values are last and first.
+  createIssueManually: false # Gitalk will create a corresponding github issue for your every single page automatically
   option:
 
 # valine
