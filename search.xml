@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Unity渲染顺序探究</title>
+      <link href="/2023/09/05/Unity%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F%E6%8E%A2%E7%A9%B6/"/>
+      <url>/2023/09/05/Unity%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F%E6%8E%A2%E7%A9%B6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前段时间在群里看见一个有关于求问Unity渲染透明物体与不透明物体渲染顺序的问题，有群友提到了深度与渲染顺序有关，就去找了相关资料学习，并在这里记录一下。</p><h3 id="Unity的UGUI层级渲染顺序管理"><a href="#Unity的UGUI层级渲染顺序管理" class="headerlink" title="Unity的UGUI层级渲染顺序管理"></a>Unity的UGUI层级渲染顺序管理</h3><p><img src="../Unity%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F%E6%8E%A2%E7%A9%B6/Untitled.png" alt="Untitled"></p><p>摄像机的Depth：值越大，渲染物体越靠上，<strong>摄像机会根据Depth从小到大的顺序，渲染各自Culling Mask的层。</strong></p><p>RenderQueue：渲染物体的透明度，小于2500的先渲染</p><p>SortingLayer：SortingLayer在Inspector面板中点击Tag -&gt; AddTag -&gt; SortingLayer，可以添加自定义的sortingLayer，默认的sortingLayer为Default</p><p>Order In Layer：SortingLayer中的内部渲染排序。</p><p><img src="../Unity%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F%E6%8E%A2%E7%A9%B6/Untitled1.png" alt="Untitled"></p><p><img src="../Unity%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F%E6%8E%A2%E7%A9%B6/Untitled2.png" alt="Untitled"></p><p>RectTransform.SetSiblingIndex：设置显示与渲染顺序，值越大，越靠上</p><ul><li>SetAsFirstSibling：移动到所有兄弟节点的第一个位置（Hierarchy同级最上面，先渲染，显示在最下面）</li><li>SetAsLastSibling：移动到所有兄弟节点的最后一个位置（Hierarchy同级最下面，后渲染，显示在最上面）</li><li>GetSiblingIndex：获得该元素在当前兄弟节点层级的位置</li><li>SetSiblingIndex：设置该元素在当前兄弟节点层级的位置</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> 性能优化 </tag>
+            
+            <tag> 图形渲染 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>A*算法</title>
       <link href="/2023/08/06/A-%E7%AE%97%E6%B3%95/"/>
       <url>/2023/08/06/A-%E7%AE%97%E6%B3%95/</url>
