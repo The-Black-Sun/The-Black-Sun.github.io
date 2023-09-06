@@ -2,7 +2,7 @@
 title: Lua学习总结
 date: 2023-09-06 20:54:23
 tags: [Lua]
-ategories: Lua
+categories: Lua
 description: 一篇关于Lua知识的学习总结
 copyright_author: 墨墨辰
 copyright_author_href: https://the-black-sun.github.io/
