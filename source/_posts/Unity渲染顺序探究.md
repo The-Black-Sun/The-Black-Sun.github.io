@@ -8,7 +8,7 @@ copyright_author: 墨墨辰
 copyright_author_href: https://the-black-sun.github.io/
 copyright_url: https://the-black-sun.github.io/2023/09/05/Unity渲染顺序探究/
 copyright_info: 此文章版权若没有特别注明，则归墨墨辰所有，如有转载，请注明来自原作者。
-cover: https://i0.hdslb.com/bfs/article/83916cd63e6210d2593f3c0fb12661542115cf7f.jpg
+cover: https://the-black-sun-imgs.pages.dev/Img/Cover.jpg
 ---
 ### 前言
 

@@ -33,8 +33,8 @@ highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
-code_word_wrap: false
+highlight_height_limit: 200 # unit: px
+code_word_wrap: true
 
 # copy settings
 # copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
@@ -145,6 +145,7 @@ cover:
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
     - https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png
+    # - https://the-black-sun-imgs.pages.dev/Img/Cover.jpg
     # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
