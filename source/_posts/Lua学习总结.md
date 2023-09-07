@@ -78,7 +78,7 @@ Lua 语言的的编译，首先需要明白代码块（chunk），闭包（closu
   - **Value**提供基础数据的存储方式（GC 对象，指针，number 与布朗值）以及**GCObject**。
   - **GCObject**提供所有非基础类型的存储方式（table，string，closure 等），需要进行垃圾回收
 
-```c
+``` c
 struct lua_TValue {
   Value value_;
   int tt_;         //数据类型标识，新版11种（下截图），同时使用TValuefields进行表示
@@ -130,7 +130,7 @@ typedef struct GCheader{
 
 Lua 中的数据结构中，表 Table 是最重要的一种。在逻辑上是一个关联数组（哈希表，实际上是有一个哈希表与数组组成），`可以通过任何值（除了 nil）来索引表项，表项可以存储任何类型的值`。原因可以看一下存储在**GCObject**中的 struct 表 table 的代码结构：
 
-```c
+``` c
 typedef struct Table {
 	CommonHeader;
 	lu_byte flags; //元方法存在标记，标记为1，表示元方法不存在
@@ -179,7 +179,7 @@ PS：除了以上表述内容之外，Table 数据结构的散列表部分还使
 
 字符串 String 类型与本身是结构体的 table 类似。它本身是 union 联合提结构，底层代码如下：
 
-```c
+``` c
 //长短字符串定义
 #define LUA_TSHRSTR (LUA_TSTRING | (0 << 4))  /* short strings */
 #define LUA_TLNGSTR (LUA_TSTRING | (1 << 4))  /* long strings */
@@ -241,7 +241,7 @@ Lua 提供了一个虚拟栈，这个虚拟栈可以完成 Lua 语言与其他�
 
 以下是 C 语言对虚拟栈的操作 API：
 
-```c
+``` c
 /*
 ** push functions (C -> stack)
 */
@@ -288,7 +288,7 @@ LUA_API const void     *(lua_topointer) (lua_State *L, int idx);
 
 以下是 Lua 对虚拟栈的操作 API：
 
-```c
+``` c
 /*
 ** get functions (Lua -> stack)
 */
@@ -315,7 +315,7 @@ LUA_API int   (lua_setmetatable) (lua_State *L, int obj
 
 除此之外，还有一系列用来控制堆栈的相关函数（栈操作）：
 
-```c
+``` c
 /*
 ** basic stack manipulation
 */
@@ -362,7 +362,7 @@ PS：注意 XLua 或 ToLua 都是对 Lua 虚拟机做了上层封装，方便进
 
 常见形式：通过调用含有一个内部函数加上该外部函数持有的外部局部变量（upvalue）的外部函数产生的一个函数实例。（外部函数+外部局部变量+内部函数（闭包函数））。
 
-```lua
+``` lua
 function test()
         local i=0
         return function()//尾调用
@@ -384,7 +384,7 @@ function test()
 
 PS：由于迭代器需要保存上一次调用的状态与下一次成功调用的状态，可以正好用闭包的机制实现。（迭代器只是一个生成器，本身不带有循环）以下是迭代器的实现。
 
-```lua
+``` lua
 　 function list_iter(t)
             local i=0
             local n=table.getn(t)
@@ -435,7 +435,7 @@ end
 
 ### 面向对象的实现
 
-```lua
+``` lua
 --基类Account
 Account = {balance = 0}
 
@@ -516,7 +516,7 @@ s:withdraw(200.00)
 
 GC 的主要流程如下：
 
-```c
+``` c
 为每一个新创建的节点设置为cur white（当前白色）
 //初始化阶段
 遍历root根节点的引用对象，将white（所有白色）设置成灰色，放入灰色节点链表中
