@@ -1629,15 +1629,6 @@ figure.highlight pre .tag .attr,
 figure.highlight pre .javascript .function {
   color: #c792ea;
 }
-#article-container figure.highlight .line:before {
-  display: inline-block;
-  padding: 0 6px 0 0;
-  min-width: 30px;
-  color: var(--hlnumber-color);
-  content: counter(line);
-  counter-increment: line;
-  text-align: left;
-}
 #article-container figure.highlight .line.marked {
   background-color: rgba(97,97,97,0.314);
 }
@@ -1662,100 +1653,6 @@ figure.highlight pre .javascript .function {
   padding-left: 10px;
   width: 100%;
 }
-pre[class*='language-'] .token.comment,
-pre[class*='language-'] .token.prolog,
-pre[class*='language-'] .token.doctype,
-pre[class*='language-'] .token.cdata {
-  color: #7c7c7c;
-}
-pre[class*='language-'] .token.punctuation {
-  color: #c5c8c6;
-}
-pre[class*='language-'] .namespace {
-  opacity: 0.7;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-  filter: alpha(opacity=70);
-}
-pre[class*='language-'] .token.property,
-pre[class*='language-'] .token.keyword,
-pre[class*='language-'] .token.tag {
-  color: #96cbfe;
-}
-pre[class*='language-'] .token.class-name {
-  color: #ffffb6;
-}
-pre[class*='language-'] .token.boolean,
-pre[class*='language-'] .token.constant {
-  color: #9c9;
-}
-pre[class*='language-'] .token.symbol,
-pre[class*='language-'] .token.deleted {
-  color: #f92672;
-}
-pre[class*='language-'] .token.number {
-  color: #ff73fd;
-}
-pre[class*='language-'] .token.selector,
-pre[class*='language-'] .token.attr-name,
-pre[class*='language-'] .token.string,
-pre[class*='language-'] .token.char,
-pre[class*='language-'] .token.builtin,
-pre[class*='language-'] .token.inserted {
-  color: #a8ff60;
-}
-pre[class*='language-'] .token.variable {
-  color: #c6c5fe;
-}
-pre[class*='language-'] .token.operator {
-  color: #ededed;
-}
-pre[class*='language-'] .token.entity {
-  color: #ffffb6;
-  cursor: help;
-}
-pre[class*='language-'] .token.url {
-  color: #96cbfe;
-}
-pre[class*='language-'] .language-css .token.string,
-pre[class*='language-'] .style .token.string {
-  color: #87c38a;
-}
-pre[class*='language-'] .token.atrule,
-pre[class*='language-'] .token.attr-value {
-  color: #f9ee98;
-}
-pre[class*='language-'] .token.function {
-  color: #dad085;
-}
-pre[class*='language-'] .token.regex {
-  color: #e9c062;
-}
-pre[class*='language-'] .token.important {
-  color: #fd971f;
-}
-pre[class*='language-'] .token.important,
-pre[class*='language-'] .token.bold {
-  font-weight: bold;
-}
-pre[class*='language-'] .token.italic {
-  font-style: italic;
-}
-#article-container pre[class*='language-'] {
-  scrollbar-color: var(--hlscrollbar-bg) transparent;
-}
-#article-container pre[class*='language-']::-webkit-scrollbar-thumb {
-  background: var(--hlscrollbar-bg);
-}
-#article-container pre[class*='language-']:not(.line-numbers) {
-  padding: 10px 20px;
-}
-#article-container pre[class*='language-'] .caption {
-  margin-left: -3.8em;
-  padding: 4px 16px !important;
-}
-#article-container pre[class*='language-'] .caption a {
-  padding: 0 !important;
-}
 #article-container pre,
 #article-container figure.highlight {
   overflow: auto;
@@ -1764,8 +1661,6 @@ pre[class*='language-'] .token.italic {
   background: var(--hl-bg);
   color: var(--hl-color);
   line-height: 1.6;
-  counter-reset: line;
-  white-space: pre-wrap;
 }
 #article-container pre,
 #article-container code {
