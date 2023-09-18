@@ -110,3 +110,7 @@ deploy:
 lazyload:
   enable: true
   loadingImg: /img/loading.gif
+
+aplayer:
+  meting: true
+  asset_inject: false

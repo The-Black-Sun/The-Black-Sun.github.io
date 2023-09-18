@@ -661,7 +661,6 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - 要看很多电影，要看很多的书，毕竟每天都很短暂。
     - 务必要疯狂地怀抱雄心，且还要疯狂地真诚。
 
 # Loading Animation (加載動畫)
@@ -841,7 +840,7 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)
@@ -908,6 +907,7 @@ inject:
     - <link rel="stylesheet" href="/css/background.css">
     - <link rel="stylesheet" href="/css/icon.css" media="defer" onload="this.media='all'">
   bottom:
+    - '<div class="aplayer no-destroy" data-id="8740452027" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>'
     # - <script src="xxxx"></script>
 
 # CDN
@@ -940,7 +940,8 @@ CDN:
     # algolia_js:
     # algolia_search_v4:
     # instantsearch_v4:
-    # pjax:
+    pjax:
+      enable: true
     # gitalk:
     # gitalk_css:
     # blueimp_md5:
