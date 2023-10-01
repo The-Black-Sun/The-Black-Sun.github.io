@@ -10,11 +10,17 @@ copyright_url: https://the-black-sun.github.io/2023/09/05/Unity渲染顺序探�
 copyright_info: 此文章版权若没有特别注明，则归墨墨辰所有，如有转载，请注明来自原作者。
 cover: https://the-black-sun-imgs.pages.dev/Img/Cover.jpg
 ---
+2023年10月1日更新
+
+---
+
 ### 前言
 
 前段时间在群里看见一个有关于求问Unity渲染透明物体与不透明物体渲染顺序的问题，有群友提到了深度与渲染顺序有关，就去找了相关资料学习，并在这里记录一下。
 
 ### Unity的UGUI层级渲染顺序管理
+
+主要是层级管理可以看下方这一张图片，其中RenderQueue的数值关系到了渲染队列的划分。unity中的渲染队列主要有5个，分别是背景渲染队列，不透明渲染队列，透明度测试渲染队列，透明度混合渲染队列以及特殊物体渲染队列（主要用来渲染同一个物体存在相互遮挡且透明的情况）。其中最主要的不透明与透明渲染队列的划分也就如下图所示，是以2500为分界线。
 
 ![Untitled](../Unity渲染顺序探究/Untitled.png)
 
@@ -36,3 +42,5 @@ RectTransform.SetSiblingIndex：设置显示与渲染顺序，值越大，越靠
 - SetAsLastSibling：移动到所有兄弟节点的最后一个位置（Hierarchy同级最下面，后渲染，显示在最上面）
 - GetSiblingIndex：获得该元素在当前兄弟节点层级的位置
 - SetSiblingIndex：设置该元素在当前兄弟节点层级的位置
+
+除此之外还有根据深度z轴判断前后关系，y轴判断前后关系，x轴判断前后关系等，在2.5D游戏中人物与环境的遮挡交互会使用到，这里先不做过多的赘述。

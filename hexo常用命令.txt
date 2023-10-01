@@ -84,3 +84,21 @@ toc:
   expand: false
   style_simple: false # for post
   scroll_percent: true
+
+git config --global http.proxy 127.0.0.1:1080
+git config --global https.proxy 127.0.0.1:1080
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+
+{% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %}
+标签参数
+title : 曲目标题
+author: 曲目作者
+url: 音乐文件 URL 地址
+picture_url: (可选) 音乐对应的图片地址
+narrow: （可选）播放器袖珍风格
+autoplay: (可选) 自动播放，移动端浏览器暂时不支持此功能
+width:xxx: (可选) 播放器宽度 (默认: 100%)
+lrc:xxx: （可选）歌词文件 URL 地址
