@@ -1,13 +1,13 @@
 ---
 title: A*算法
 date: 2023-08-06 15:40:29
-tags: [算法, 路径规划，性能优化]
+tags: [算法,路径规划,性能优化]
 categories: 算法
 description: 一个简单的静态网格寻路算法。
 copyright_author: 墨墨辰
 copyright_author_href: https://the-black-sun.github.io/
 copyright_url: https://the-black-sun.github.io/2023/08/06/A-算法/
-copyright_info: 此文章版权若没有特别注明，则归墨墨辰所有，如有转载，请注明来自原作者。
+copyright_info: 此文章版权若没有特别注明，则归作者所有，如有转载，请注明来自原作者。
 ---
 ### 定义
 
